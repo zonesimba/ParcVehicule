@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="799.0" prefWidth="878.0" style="-fx-background-color: rgba(61,71,81,1);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <HBox layoutX="563.0" layoutY="14.0" prefHeight="60.0" prefWidth="305.0" style="-fx-border-color: transparent; -fx-color: white;">
+         <children>
+            <Label fx:id="titre" prefHeight="58.0" prefWidth="306.0" style="-fx-font-size: 40; -fx-color: white;" text="PARK" textAlignment="CENTER" textFill="WHITE" />
+         </children>
+      </HBox>
+      <TableView fx:id="table" layoutX="13.0" layoutY="12.0" prefHeight="773.0" prefWidth="524.0">
+         <columns>
+            <TableColumn prefWidth="50.0" text="N" />
+            <TableColumn prefWidth="116.0" text="ID" />
+            <TableColumn prefWidth="158.0" text="Type Vehicule" />
+            <TableColumn prefWidth="198.0" text="Mark Vehicule" />
+         </columns>
+      </TableView>
+      <TextField fx:id="recherche_voiture" layoutX="558.0" layoutY="428.0" onKeyReleased="#look" prefHeight="52.0" prefWidth="305.0" />
+      <Label layoutX="563.0" layoutY="74.0" prefHeight="58.0" prefWidth="305.0" style="-fx-font-size: 20;" text="Nouvelle Voiture" textFill="WHITE" />
+      <Label layoutX="559.0" layoutY="370.0" prefHeight="58.0" prefWidth="305.0" style="-fx-font-size: 15;" text="Chercher une voiture par sa mark" textFill="WHITE" />
+      <Label layoutX="563.0" layoutY="263.0" prefHeight="45.0" prefWidth="303.0" style="-fx-font-size: 20;" text="Supprimer par ID" textFill="WHITE" />
+      <GridPane layoutX="549.0" layoutY="132.0" prefHeight="131.0" prefWidth="305.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <ComboBox fx:id="type_choix" layoutX="559.0" layoutY="142.0" prefHeight="45.0" prefWidth="305.0" />
+      <Button fx:id="nvoiture" layoutX="727.0" layoutY="193.0" mnemonicParsing="false" onAction="#newCar" prefHeight="52.0" prefWidth="137.0" text="Ajouter" />
+      <TextField fx:id="mark_voiture" layoutX="559.0" layoutY="193.0" onKeyReleased="#look" prefHeight="52.0" prefWidth="163.0" />
+      <HBox layoutX="559.0" layoutY="308.0" prefHeight="45.0" prefWidth="303.0">
+         <children>
+            <ComboBox fx:id="id_voiture" prefHeight="45.0" prefWidth="166.0" />
+            <Button fx:id="deleteVoiture" mnemonicParsing="false" onAction="#supprimerVoiture" prefHeight="45.0" prefWidth="167.0" text="Supprimer" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
